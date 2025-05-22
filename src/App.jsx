@@ -24,15 +24,10 @@ export const alex = {
   isMarried: false,
 };
 
-export const App = () => {
-  const people = [misha, olya, alex];
-
-  return (
-    <div className="App">
-      {/* 渲染 Person 组件 */}
-      {people.map(person => (
-        <Person key={person.name} person={person} />
-      ))}
-    </div>
-  );
-};
+export const App = () => (
+  <div className="App">
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
+  </div>
+);
